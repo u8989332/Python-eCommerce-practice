@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -18,11 +20,13 @@
 </head>
 
 <body>
+  <p1>Hwww</p1>
   <div class="container">
 
     <h1 class="text-center"> heelolllokojiji world gusssss</h1>
     <h2>{{ title }}</h2>
     <h3>{{ content }}</h3>
+    <img src="{% static 'img/heart.png' %}" class='img-fluid' />
     {% if request.user.is_authenticated %}
     <div class="row">
       <div class="col">
